@@ -167,7 +167,7 @@ function checkSolution() {
   }
 
   document.getElementById("result").textContent =
-    correct ? "✅ Correct!" : "❌ Wrong!";
+    correct ? "✅ DING DING DING SVARET ER KORREKT!" : "❌ Noget passer ikke helt sammen";
 }
 
 createGrid();
