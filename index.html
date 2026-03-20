@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Logic Puzzle</title>
+
+<style>
+  body { font-family: Arial; }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  td, th{
+    border: 1px solid black;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+  }
+  
+
+  th {
+    background: #222;
+    color: white;
+  }
+
+  .subhead {
+    background: #444;
+    color: white;
+    font-size: 12px;
+  }
+
+  .label {
+    background: #ddd;
+    font-weight: bold;
+  }
+
+  .inactive {
+  border: none !important;
+  background: transparent;
+  pointer-events: none;
+  }
+
+  .cell {
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .thick-right {
+    border-right: 3px solid black !important;
+}
+
+  .thick-bottom {
+    border-bottom: 3px solid black !important;
+}
+
+  .clues {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    max-width: 500px;
+    font-size: 14px; /* Adjust as needed */
+  }
+  .answer{
+  font-size: 25px;
+  }
+
+</style>
+</head>
+
+<body>
+
+<h2>Kaptajnens hovedvrider<h2>
+
+<div style="display: flex; gap: 20px; align-items: flex-start;">
+  <div>
+    <table id="grid"></table>
+    <br> 
+    <button onclick="checkSolution()">Tjek svar</button>
+	<div class="answer">
+    <p id="result"></p>
+	</div>
+  </div>
+  <div class="clues">
+    <h3>Ledetråde<h3>
+    <p><strong>1.</strong> Søren arbejder altid senere end Salvie</p>
+    <p><strong>2.</strong> Søren eller Svend fanger torsk, den anden fanger makrel</p>
+    <p><strong>3.</strong> Torsk bliver aldrig fanget på den tidligste arbejdstid</p>
+    <p><strong>4.</strong> Fisken som bliver fanget mandag er enten skrubbe eller torsk</p>
+	<p><strong>5.</strong> Salvie eller Svend arbejder enten fra 05-10 eller 10-15</p>
+	<p><strong>6.</strong> Sømændende som arbejder fra 05-10 og 15-20 arbejder enten tirsdag eller onsdag</p>
+	<p><strong>7.</strong> Båden sejler kun 15-20 om tirsdagen</p>
+	<p><strong>8.</strong> Enten fanger Søren torsk Tirsdag eller Onsdag</p>
+	</div>
+  </div>
+ <div class="clues">
+    <h3>Sådan spiller du <h3>
+    <p><strong>1.</strong> Kun en sømand kan arbejde en specifik dag, en arbejdstid og fange en type fisk</p>
+    <p><strong>2.</strong> Der er ingen gengangere</p>
+    <p><strong>3.</strong> Sæt X hvor det ikke kan lade sig gøre</p>
+    <p><strong>4.</strong> Sæt O hvor det kan lade sig gøre</p>
+	</div>
+  </div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
